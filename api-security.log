@@ -1,0 +1,105 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.4)
+
+2025-12-05T16:20:47.945Z  INFO 1 --- [           main] c.example.agromove.AgromoveApplication   : Starting AgromoveApplication v0.0.1-SNAPSHOT using Java 17.0.17 with PID 1 (/app/app.jar started by root in /)
+2025-12-05T16:20:47.946Z  INFO 1 --- [           main] c.example.agromove.AgromoveApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-12-05T16:20:48.443Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-05T16:20:48.475Z  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 5 JPA repository interfaces.
+2025-12-05T16:20:48.786Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-12-05T16:20:48.791Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-05T16:20:48.791Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2025-12-05T16:20:48.833Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-05T16:20:48.833Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 861 ms
+2025-12-05T16:20:48.947Z  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-05T16:20:48.977Z  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2025-12-05T16:20:48.979Z  INFO 1 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-12-05T16:20:49.059Z  INFO 1 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-12-05T16:20:49.119Z  INFO 1 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-05T16:20:49.128Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-05T16:20:49.281Z  INFO 1 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b7cae6f
+2025-12-05T16:20:49.282Z  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-05T16:20:49.409Z  INFO 1 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-12-05T16:20:49.730Z  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-12-05T16:20:49.765Z  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-05T16:20:50.033Z  WARN 1 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-05T16:20:50.235Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2025-12-05T16:20:50.252Z  INFO 1 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@477021ee, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2180e789, org.springframework.security.web.context.SecurityContextHolderFilter@1d6751e3, org.springframework.security.web.header.HeaderWriterFilter@22825e1e, org.springframework.web.filter.CorsFilter@3850e90c, org.springframework.security.web.authentication.logout.LogoutFilter@59845579, com.example.agromove.security.JwtAuthenticationFilter@5e9bbd9d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64502326, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a058df8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b87074a, org.springframework.security.web.access.ExceptionTranslationFilter@2c1f8dbd, org.springframework.security.web.access.intercept.AuthorizationFilter@6010d0d1]
+2025-12-05T16:20:50.431Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-12-05T16:20:50.441Z  INFO 1 --- [           main] c.example.agromove.AgromoveApplication   : Started AgromoveApplication in 2.67 seconds (process running for 2.897)
+Hibernate: select a1_0.id,a1_0.password,a1_0.role,a1_0.username from app_user a1_0 where a1_0.username=?
+2025-12-05T16:21:07.721Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-05T16:21:07.722Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-05T16:21:07.723Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-05T16:21:07.732Z DEBUG 1 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-12-05T16:21:07.744Z DEBUG 1 --- [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-05T16:21:07.750Z DEBUG 1 --- [nio-8080-exec-1] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/auth/login?continue to session
+2025-12-05T16:21:07.750Z DEBUG 1 --- [nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-05T16:21:07.752Z DEBUG 1 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-12-05T16:21:07.754Z DEBUG 1 --- [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-05T16:21:07.754Z DEBUG 1 --- [nio-8080-exec-1] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2025-12-05T16:21:07.755Z DEBUG 1 --- [nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-05T16:21:39.788Z DEBUG 1 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-12-05T16:21:39.797Z DEBUG 1 --- [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-05T16:21:39.800Z DEBUG 1 --- [nio-8080-exec-3] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/?continue to session
+2025-12-05T16:21:39.800Z DEBUG 1 --- [nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-05T16:21:39.801Z DEBUG 1 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-12-05T16:21:39.804Z DEBUG 1 --- [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-05T16:21:39.805Z DEBUG 1 --- [nio-8080-exec-3] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2025-12-05T16:21:39.805Z DEBUG 1 --- [nio-8080-exec-3] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-05T16:21:41.070Z DEBUG 1 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-12-05T16:21:41.078Z DEBUG 1 --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-05T16:21:41.081Z DEBUG 1 --- [nio-8080-exec-4] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/?continue to session
+2025-12-05T16:21:41.081Z DEBUG 1 --- [nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-05T16:21:41.082Z DEBUG 1 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-12-05T16:21:41.085Z DEBUG 1 --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-05T16:21:41.087Z DEBUG 1 --- [nio-8080-exec-4] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2025-12-05T16:21:41.087Z DEBUG 1 --- [nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-05T16:21:41.320Z DEBUG 1 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-12-05T16:21:41.327Z DEBUG 1 --- [nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-05T16:21:41.329Z DEBUG 1 --- [nio-8080-exec-5] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/?continue to session
+2025-12-05T16:21:41.329Z DEBUG 1 --- [nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-05T16:21:41.330Z DEBUG 1 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-12-05T16:21:41.334Z DEBUG 1 --- [nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-05T16:21:41.335Z DEBUG 1 --- [nio-8080-exec-5] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2025-12-05T16:21:41.335Z DEBUG 1 --- [nio-8080-exec-5] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-05T16:22:32.278Z DEBUG 1 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2025-12-05T16:22:32.284Z DEBUG 1 --- [nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-05T16:22:32.285Z DEBUG 1 --- [nio-8080-exec-8] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/auth/login?continue to session
+2025-12-05T16:22:32.286Z DEBUG 1 --- [nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-05T16:22:32.286Z DEBUG 1 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /error
+2025-12-05T16:22:32.288Z DEBUG 1 --- [nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-05T16:22:32.288Z DEBUG 1 --- [nio-8080-exec-8] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2025-12-05T16:22:32.288Z DEBUG 1 --- [nio-8080-exec-8] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-05T16:23:52.966Z DEBUG 1 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-12-05T16:23:52.974Z DEBUG 1 --- [io-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-05T16:23:52.977Z DEBUG 1 --- [io-8080-exec-10] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/?continue to session
+2025-12-05T16:23:52.977Z DEBUG 1 --- [io-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-05T16:23:52.978Z DEBUG 1 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-12-05T16:23:52.981Z DEBUG 1 --- [io-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-05T16:23:52.982Z DEBUG 1 --- [io-8080-exec-10] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2025-12-05T16:23:52.982Z DEBUG 1 --- [io-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-05T16:23:53.672Z DEBUG 1 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-12-05T16:23:53.676Z DEBUG 1 --- [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-05T16:23:53.677Z DEBUG 1 --- [nio-8080-exec-1] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/?continue to session
+2025-12-05T16:23:53.677Z DEBUG 1 --- [nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-05T16:23:53.679Z DEBUG 1 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-12-05T16:23:53.682Z DEBUG 1 --- [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-05T16:23:53.683Z DEBUG 1 --- [nio-8080-exec-1] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2025-12-05T16:23:53.683Z DEBUG 1 --- [nio-8080-exec-1] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-05T16:23:53.910Z DEBUG 1 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-12-05T16:23:53.915Z DEBUG 1 --- [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-05T16:23:53.917Z DEBUG 1 --- [nio-8080-exec-2] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/?continue to session
+2025-12-05T16:23:53.917Z DEBUG 1 --- [nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-05T16:23:53.919Z DEBUG 1 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-12-05T16:23:53.922Z DEBUG 1 --- [nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-12-05T16:23:53.922Z DEBUG 1 --- [nio-8080-exec-2] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?continue to session
+2025-12-05T16:23:53.922Z DEBUG 1 --- [nio-8080-exec-2] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2025-12-05T16:29:04.571Z  INFO 1 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-05T16:29:04.578Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-05T16:29:04.587Z  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -1,0 +1,51 @@
+version: '2.4'   # allows depends_on.condition: service_healthy
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: agromove-improved-db-1
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: agrotrack
+    volumes:
+      - db-data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+    healthcheck:
+      # ping using mysqladmin; start_period and retries extended to survive init
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -uroot -p${MYSQL_ROOT_PASSWORD} || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+
+  api:
+    build:
+      context: .
+    container_name: agromove-improved-api-1
+    restart: on-failure
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:mysql://db:3306/agrotrack?serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false"
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: secret
+      # explicit dialect fallback so Hibernate won't fail if it can't read metadata immediately
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQL8Dialect
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      APP_JWT_SECRET: change-this-secret-to-32charsmin
+      JAVA_OPTS: ""
+    ports:
+      - "8080:8080"
+    # defensive start: wait until TCP on db:3306 accepts connections, then start the app
+    command: >
+      sh -c "set -e;
+             echo 'waiting for db tcp:3306...';
+             until nc -z db 3306; do echo 'db not ready yet...'; sleep 1; done;
+             echo 'db tcp open — starting app';
+             exec java $JAVA_OPTS -jar /app/app.jar"
+
+volumes:
+  db-data:
