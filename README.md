@@ -66,8 +66,11 @@ The layered architecture improves maintainability, scalability, and testability.
 
 ### ✅ Run with Docker (Recommended)
 
-bash
+
+```bash
 docker-compose up --build
+```
+
 
 No local Maven setup required.
 
