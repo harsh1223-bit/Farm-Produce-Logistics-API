@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 AgroMove - Improved API scaffold
 
 What's improved:
@@ -23,6 +23,4 @@ Default admin credentials (seeded):
   password: admin123
 
 Swagger UI: http://localhost:8080/swagger-ui/index.html
-=======
-# Farm-Produce-Logistics-API
->>>>>>> 4fad12ff929c7aff7d9654cf949220ded8e99da7
+
