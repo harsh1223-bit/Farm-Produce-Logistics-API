@@ -23,3 +23,10 @@ build/
 .idea/
 *.iml
 .vscode/
+
+# Sensitive / Local files
+.env
+*.log
+*.bak
+cookies.txt
+
