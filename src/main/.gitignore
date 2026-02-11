@@ -1,0 +1,25 @@
+# Maven
+target/
+
+# Gradle
+build/
+.gradle/
+
+# Compiled class files
+*.class
+
+# Packaged files
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log 
+
+# Mac (since you are on Mac)
+.DS_Store
+
+# IDE
+.idea/
+*.iml
+.vscode/
